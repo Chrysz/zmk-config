@@ -16,9 +16,11 @@
 / {
         conditional_layers {
                 compatible = "zmk,conditional-layers";
-                custom_layer = <LOWER RAISE>;
-                then-layer = <CUSTOM>;
-        }
+                custom_layer {
+                        if-layers = <LOWER RAISE>
+                        then-layer = <CUSTOM>
+                };
+        };
 
         keymap {
                 compatible = "zmk,keymap";
