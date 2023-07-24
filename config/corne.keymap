@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
 #define LOWER   1
@@ -64,7 +65,7 @@
    &kp ESC    &kp BSLH   &kp AT   &none     &kp LBKT     &kp RBKT                   &kp N7   &kp N8   &kp N9  &kp ASTRK &kp FSLH   &kp BSPC
    &kp LSHFT  &kp GRAVE  &kp LBRC &kp RBRC  &kp KP_MINUS &kp UNDER                  &kp N4   &kp N5   &kp N6  &kp PLUS  &kp MINUS  &kp KP_EQUAL
    &kp LCTRL  &kp LPAR   &kp RPAR &none     &none        &kp TILDE                  &kp N1   &kp N2   &kp N3  &kp N0    &kp KP_DOT &kp RALT
-                                         &kp LGUI &mo LOWER &kp SPACE           &kp RET &mo RAISE &kp LALT
+                                         &kp LGUI &mo LOWER &mt LALT SPACE      &kp RET &mo RAISE &kp LALT
                         >;
                 };
 
@@ -91,13 +92,13 @@
 
                 custom_layer {
 /* CUSTOM
- * ,----------------------------------------------.                    ,-----------------------------------------.
- * |      |       |       |       |       |RGB_TOG|                    | PREV |PL/STP| NEXT | MUTE | VOL -| VOL +|
- * |------+-------+-------+-------+-------+-------|                    |------+------+------+------+------+------|
- * |      |RGB_HUI|RGB_SAI|RGB_BRI|RGB_SPI|RGB_EFF|                    |  BT1 |  BT2 |  BT3 |  BT4 | BT5  |BT-CLR|
- * |------+-------+-------+-------+-------+-------|                    |------+------+------+------+------+------|
- * |      |RGB_HUD|RGB_SAD|RGB_BRD|RGB_SPD|RGB_EFR|--------.   .-------|      |      |      |      |      |      |
- * `----------------------------------------------/       /     \      \-----------------------------------------'
+ * ,----------------------------------------------.                    ,------------------------------------------.
+ * |      |       |       |       |       |RGB_TOG|                    | PREV |PL/STP| NEXT | MUTE | VOL -| VOL + |
+ * |------+-------+-------+-------+-------+-------|                    |------+------+------+------+------+-------|
+ * |      |RGB_HUI|RGB_SAI|RGB_BRI|RGB_SPI|RGB_EFF|                    |  BT1 |  BT2 |  BT3 |  BT4 | BT5  |BT-CLR |
+ * |------+-------+-------+-------+-------+-------|                    |------+------+------+------+------+-------|
+ * |      |RGB_HUD|RGB_SAD|RGB_BRD|RGB_SPD|RGB_EFR|--------.   .-------|      |      |      |      |      |OUT_TOG|
+ * `----------------------------------------------/       /     \      \------------------------------------------'
  *                               |      |      | /       /       \      \  |      |      |
  *                               |      |      |/       /         \      \ |      |      |
  *                               `---------------------'           '------''-------------'
@@ -105,7 +106,7 @@
                         bindings = <
    &none   &none            &none              &none           &none           &rgb_ug RGB_TOG                   &kp C_PREV    &kp C_PP      &kp C_NEXT    &kp C_MUTE    &kp C_VOL_DN &kp C_VOL_UP
    &none   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI    &rgb_ug RGB_BRI &rgb_ug RGB_SPI &rgb_ug RGB_EFF                   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4 &bt BT_CLR
-   &none   &rgb_ug RGB_HUD  &rgb_ug RGB_SAD    &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_EFR                   &none         &none         &none         &none         &none        &none 
+   &none   &rgb_ug RGB_HUD  &rgb_ug RGB_SAD    &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_EFR                   &none         &none         &none         &none         &none        &out OUT_TOG
                                                                             &trans   &trans   &trans          &trans    &trans     &trans 
                         >;
                 };
