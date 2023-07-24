@@ -15,6 +15,10 @@
 #define RAISE   2
 #define CUSTOM  3
 
+&mt {
+        tapping-term-ms = <120>;
+};
+
 / {
         conditional_layers {
                 compatible = "zmk,conditional-layers";
@@ -22,10 +26,6 @@
                         if-layers = <LOWER RAISE>;
                         then-layer = <CUSTOM>;
                 };
-        };
-
-        mt {
-                tapping-term-ms = <120>;
         };
 
         keymap {
