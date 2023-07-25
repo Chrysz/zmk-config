@@ -17,7 +17,11 @@
 #define CUSTOM  3
 
 &mt {
-        tapping-term-ms = <120>;
+        tapping-term-ms = <125>;
+};
+
+&led_strip {
+        chain-leng = <27>;
 };
 
 / {
@@ -67,9 +71,9 @@
  *                          `---------------------'           '------''-------------'
  */
                         bindings = <
-   &kp ESC    &kp BSLH   &kp AT   &none     &kp LBKT     &kp RBKT                   &kp N7   &kp N8   &kp N9  &kp ASTRK &kp FSLH   &kp BSPC
-   &kp LSHFT  &kp GRAVE  &kp LBRC &kp RBRC  &kp MINUS &kp UNDER                  &kp N4   &kp N5   &kp N6  &kp PLUS  &kp MINUS  &kp KP_EQUAL
-   &kp LCTRL  &kp LPAR   &kp RPAR &kp LALT  &kp TAB      &kp TILDE                  &kp N1   &kp N2   &kp N3  &kp N0    &kp KP_DOT &kp RALT
+   &kp ESC    &kp BSLH   &kp AT         &none            &kp LBKT     &kp RBKT                   &kp N7   &kp N8   &kp N9  &kp ASTRK &kp FSLH   &kp BSPC
+   &kp LSHFT  &kp GRAVE  &kp LEFT_BRACE &kp RIGHT_BRACE  &kp MINUS    &kp UNDER                  &kp N4   &kp N5   &kp N6  &kp PLUS  &kp MINUS  &kp KP_EQUAL
+   &kp LCTRL  &kp LPAR   &kp RPAR       &kp LALT         &kp TAB      &kp TILDE                  &kp N1   &kp N2   &kp N3  &kp N0    &kp KP_DOT &kp RALT
                                          &kp LGUI &mo LOWER &kp SPACE      &kp RET &mo RAISE &kp LALT
                         >;
                 };
