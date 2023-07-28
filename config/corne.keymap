@@ -16,7 +16,7 @@
 #define CUSTOM  3
 
 &mt {
-        tapping-term-ms = <120;
+        tapping-term-ms = <120>;
 };
 
 &led_strip {
